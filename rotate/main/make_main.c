@@ -34,7 +34,8 @@ void write_main(int N, FILE* main_c) {
     fprintf(main_c, "        start_counter();\n");
     fprintf(main_c, "        rotate(N, src, dst);\n");
     fprintf(main_c, "        double time = get_counter();\n");
-    fprintf(main_c, "        printf(%s, time/(N*N));\n", "\"%.4f\\n\"");
+    fprintf(main_c, "        if(try_index < trials - 1) printf(%s, time/(N*N));\n", "\"%.4f, \"");
+    fprintf(main_c, "        else                       printf(%s, time/(N*N));\n", "\"%.4f\\n\"");
     fprintf(main_c, "        use_dst(N, dst);\n");
     fprintf(main_c, "    }\n");
     fprintf(main_c, "return 0;\n");

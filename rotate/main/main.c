@@ -13,7 +13,8 @@ int main(int argc, char *argv[]) {
         start_counter();
         rotate(N, src, dst);
         double time = get_counter();
-        printf("%.4f\n", time/(N*N));
+        if(try_index < trials - 1) printf("%.4f, ", time/(N*N));
+        else                       printf("%.4f\n", time/(N*N));
         use_dst(N, dst);
     }
 return 0;

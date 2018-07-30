@@ -24,11 +24,11 @@ ${compile} ${og} -Og
 ${compile} ${o1} -O1
 ${compile} ${o2} -O2
 
-echo "run: ${no_op}"
+printf "${no_op}, "
 ${no_op}
-echo "run: ${og}"
+printf "${og}, "
 ${og}
-echo "run: ${o1}"
+printf "${o1}, "
 ${o1}
-echo "run: ${o2}"
+printf "${o2}, "
 ${o2}
