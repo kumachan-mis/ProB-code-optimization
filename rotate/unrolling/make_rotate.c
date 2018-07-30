@@ -17,8 +17,9 @@ int main(int argc, char *argv[]) {
 
 void write_main(int U, FILE* rotate_c) {
     fprintf(rotate_c, "#define U %d\n", U);
+    fprintf(rotate_c, "#include \"my_type.h\"\n");
     fprintf(rotate_c, "int s = 0;\n");
-    fprintf(rotate_c, "void rotate(int n, int src[n][n], int dst[n][n]) {\n");
+    fprintf(rotate_c, "void rotate(int n, MY_TYPE src[n][n], MY_TYPE dst[n][n]) {\n");
     fprintf(rotate_c, "    int i, j;\n");
     fprintf(rotate_c, "    for(i = 0; i < n; i++) \n");
     fprintf(rotate_c, "        for(j = 0; j < n; j+=U) {\n");

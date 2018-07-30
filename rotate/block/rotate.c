@@ -1,6 +1,7 @@
 #define B 16
+#include "my_type.h"
 int s = 0;
-void rotate(int n, int src[n][n], int dst[n][n]) {
+void rotate(int n, MY_TYPE src[n][n], MY_TYPE dst[n][n]) {
     int i, j, i_b, j_b;
     for(i = 0; i < n; i+=B) 
         for(j = 0; j < n; j+=B) {

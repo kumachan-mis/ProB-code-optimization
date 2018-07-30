@@ -1,5 +1,6 @@
+#include "my_type.h"
 int s = 0;
-void rotate(int n, int src[n][n], int dst[n][n]) {
+void rotate(int n, MY_TYPE src[n][n], MY_TYPE dst[n][n]) {
     int loop;
     const int loop_max = n-1;
     int i, j;

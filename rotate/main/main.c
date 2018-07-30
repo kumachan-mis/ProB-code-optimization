@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include "clock.h"
 #include "rotate.h"
+#include "my_type.h"
 #define N 2048
-int src[N][N], dst[N][N];
+MY_TYPE src[N][N], dst[N][N];
 int main(int argc, char *argv[]) {
     const int trials = 25;
     int try_index;
