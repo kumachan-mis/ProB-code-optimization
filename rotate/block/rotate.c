@@ -1,4 +1,4 @@
-#define B 16
+#define B 8
 #include "my_type.h"
 int s = 0;
 void rotate(int n, MY_TYPE src[n][n], MY_TYPE dst[n][n]) {

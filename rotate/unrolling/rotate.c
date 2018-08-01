@@ -1,4 +1,4 @@
-#define U 16
+#define U 8
 #include "my_type.h"
 int s = 0;
 void rotate(int n, MY_TYPE src[n][n], MY_TYPE dst[n][n]) {
@@ -13,14 +13,6 @@ void rotate(int n, MY_TYPE src[n][n], MY_TYPE dst[n][n]) {
             dst[n-1-j+5][i] = src[i][j+5];
             dst[n-1-j+6][i] = src[i][j+6];
             dst[n-1-j+7][i] = src[i][j+7];
-            dst[n-1-j+8][i] = src[i][j+8];
-            dst[n-1-j+9][i] = src[i][j+9];
-            dst[n-1-j+10][i] = src[i][j+10];
-            dst[n-1-j+11][i] = src[i][j+11];
-            dst[n-1-j+12][i] = src[i][j+12];
-            dst[n-1-j+13][i] = src[i][j+13];
-            dst[n-1-j+14][i] = src[i][j+14];
-            dst[n-1-j+15][i] = src[i][j+15];
         }
         for(;j < n; j++) dst[n-1-j][i] = src[i][j];
     s++;
