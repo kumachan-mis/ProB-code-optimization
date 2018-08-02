@@ -26,7 +26,7 @@ void write_main(int U, FILE* rotate_c) {
     fprintf(rotate_c, "            dst[n-1-j][i] = src[i][j];\n");
     int unrolling;
     for(unrolling = 1; unrolling < U; unrolling++)
-    fprintf(rotate_c, "            dst[n-1-j+%d][i] = src[i][j+%d];\n", unrolling, unrolling);
+    fprintf(rotate_c, "            dst[n-1-j-%d][i] = src[i][j+%d];\n", unrolling, unrolling);
 
     fprintf(rotate_c, "        }\n");
     fprintf(rotate_c, "        for(;j < n; j++) dst[n-1-j][i] = src[i][j];\n");

@@ -13,7 +13,7 @@ do
         rm ${result}
     fi
     echo "ブロックサイズ, 2, 4, 8, 16, 32, 64" >> ${result}
-    for n in 63 64 65 127 128 129 255 256 257 511 512 513 1023 1024 1025 2047 2048 2049 4095 4096 4097
+    for n in 64 128 256 512 1024 2048 4096
     do
         sh exp1.4/single_run.sh block           ${result} $n ${type}
         sh exp1.4/single_run.sh block_unrolling ${result} $n ${type}
