@@ -4,6 +4,6 @@
 void init_src(int n, MY_TYPE src[n][n]);
 void use_dst(int n, MY_TYPE dst[n][n]);
 void rotate(int n, MY_TYPE src[n][n], MY_TYPE dst[n][n]);
-void print_data(int trials, double time[trials]);
+void print_min(int trials, double time[trials]);
 
 #endif

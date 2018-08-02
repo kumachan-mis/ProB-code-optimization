@@ -20,14 +20,12 @@ void use_dst(int n, MY_TYPE dst[n][n])
     }
 }
 
-void print_data(int trials, double time[trials]) {
-    double min = time[0], max = time[0], mean = time[0];
+void print_min(int trials, double time[trials]) {
+    double min = time[0];
     int try_index;
     for(try_index = 1; try_index < trials; try_index++) {
         double t = time[try_index];
         if(min > t) min = t;
-        if(max < t) max = t;
-        mean += t;
     }
-    printf("%.4f, %.4f, %.4f\n", min, mean/trials, max);
+    printf("%.4f", min);
 }

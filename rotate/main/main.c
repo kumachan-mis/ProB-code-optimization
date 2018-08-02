@@ -2,9 +2,8 @@
 #include <stdlib.h>
 #include "clock.h"
 #include "rotate.h"
-#include "my_type.h"
-#define N 2048
-#define TRIALS 25
+#define N 4096
+#define TRIALS 50
 MY_TYPE src[N][N], dst[N][N];
 int main(int argc, char *argv[]) {
     double time[TRIALS];
@@ -15,9 +14,8 @@ int main(int argc, char *argv[]) {
         rotate(N, src, dst);
         double t = get_counter()/(N*N);
         time[try_index] = t;
-        printf("%.4f, ", t);
         use_dst(N, dst);
     }
-    print_data(TRIALS, time);
+    print_min(TRIALS, time);
 return 0;
 }
