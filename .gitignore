@@ -55,3 +55,6 @@ dkms.conf
 
 # File for macOS
 .DS_store
+
+# Exp result
+*.csv
