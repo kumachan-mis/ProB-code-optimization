@@ -2,6 +2,9 @@
 main_maker="main/maker.out"
 result="exp1.2/result.csv"
 
+if [ -e ${result} ]; then
+    rm ${result}
+fi
 echo "最適化レベル, O0, O1, O2, O3" >> ${result}
 
 gcc -O2 main/make_main_min.c -o ${main_maker}

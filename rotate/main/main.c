@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "clock.h"
 #include "rotate.h"
-#define N 63
+#define N 4096
 #define TRIALS 50
 MY_TYPE src[N][N], dst[N][N];
 int main(int argc, char *argv[]) {
