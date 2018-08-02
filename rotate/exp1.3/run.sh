@@ -1,32 +1,21 @@
 #!/bin/sh
-result="exp1.3/result.csv"
-if [ -e ${result} ]; then
-    rm ${result}
-fi
+main_maker="main/maker.out"
+gcc -O2 main/make_main_min.c -o ${main_maker}
+naive_maker="naive/maker.out"
+gcc -O2 block/make_rotate.c -o ${block_maker}
 
-echo "サイズ, 64, 128, 256, 512, 1024, 2048, 4096" >> ${result}
+for type in char int long double
+do
+    result="exp1.3/result_${type}.csv"
+    if [ -e ${result} ]; then
+        rm ${result}
+    fi
+    echo ", " >> ${result}
+    for n in 63 64 65 127 128 129 255 256 257 511 512 513 1023 1024 1025 2047 2048 2049 4095 4096 4097
+    do
+    sh exp1.3/single_run.sh naive ${result} $n ${type}
+    done
+done
 
-maker="main/maker.out"
-gcc -O2 main/make_main_min.c -o ${maker}
-${maker} 2048 int
-rm ${maker}
-
-sh exp1.3/single_run.sh naive ${result}
-
-maker="unrolling/maker.out"
-gcc -O2 unrolling/make_rotate.c -o ${maker}
-${maker} 8
-rm ${maker}
-sh exp1.3/single_run.sh unrolling ${result}
-
-maker="block/maker.out"
-gcc -O2 block/make_rotate.c -o ${maker}
-${maker} 8
-rm ${maker}
-sh exp1.3/single_run.sh block ${result}
-
-maker="block_unrolling/maker.out"
-gcc -O2 block_unrolling/make_rotate.c -o ${maker}
-${maker} 8
-rm ${maker}
-sh exp1.3/single_run.sh block_unrolling ${result}
+rm ${main_maker}
+rm ${naive_maker}
