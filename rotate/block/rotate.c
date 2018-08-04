@@ -1,4 +1,4 @@
-#define B 64
+#define B 8
 #include "my_type.h"
 static int s = 0;
 int min_int(int a, int b) {
