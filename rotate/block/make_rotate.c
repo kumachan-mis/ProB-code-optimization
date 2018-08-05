@@ -35,3 +35,6 @@ void write_main(int B, FILE* rotate_c) {
     fprintf(rotate_c, "    s++;\n");
     fprintf(rotate_c, "}\n");
 }
+
+// ブロックサイズBのブロック化を施したプログラムを
+// rotate.cとして書き出す

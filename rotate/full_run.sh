@@ -4,3 +4,5 @@ do
     sh exp1.${exp_index}/run.sh
     echo "exp1.${exp_index} finished"
 done
+
+# 実験1.5まで一括実行

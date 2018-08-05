@@ -9,3 +9,5 @@ void rotate(int n, MY_TYPE src[n][n], MY_TYPE dst[n][n]) {
     }
     s++;
 }
+
+// 最初に配布されたサンプルプログラム

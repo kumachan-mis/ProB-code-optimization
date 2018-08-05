@@ -9,6 +9,7 @@ void init_src(int n, MY_TYPE src[n][n])
         }
     }
 }
+// srcの初期化
 
 void use_dst(int n, MY_TYPE dst[n][n])
 {
@@ -19,6 +20,7 @@ void use_dst(int n, MY_TYPE dst[n][n])
         }
     }
 }
+// dstの使用
 
 void print_min(int trials, double time[trials]) {
     double min = time[0];
@@ -29,3 +31,5 @@ void print_min(int trials, double time[trials]) {
     }
     printf("%.4f", min);
 }
+
+// CPEの最小値を改行なしで出力. CSVへの成形はシェルスクリプトに任せる.

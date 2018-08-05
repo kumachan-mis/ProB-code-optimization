@@ -48,3 +48,6 @@ void  write_my_type(char* type, FILE* my_type_h) {
     fprintf(my_type_h, "#define MY_TYPE %s\n", type);
     fprintf(my_type_h, "#endif\n");
 }
+
+// メイン関数と2次元配列の型のヘッダファイルを書き出す.
+// CPEの測定結果のうち最小値を出力する. 実験1.2以降で使う. 

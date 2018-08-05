@@ -33,3 +33,6 @@ void write_main(int U, FILE* rotate_c) {
     fprintf(rotate_c, "    s++;\n");
     fprintf(rotate_c, "}\n");
 }
+
+// ループアンローリングをU回を施したプログラムを
+// rotate.cとして書き出す
